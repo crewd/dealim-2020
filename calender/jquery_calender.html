@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>달력</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="calendar-style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh"
+        crossorigin="anonymous"></script>
+    <script src="calendar.js"></script>
+    <style>
+        .container {
+            margin: 150px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>제이쿼리 달력 플러그인</h1>
+        <div class="calendar">
+            <div class="calendar-footer">
+                <div class="next-prev">
+                    <div class="btn prev-btn">prev</div>
+                    <div class="btn next-btn">next</div>
+                </div>
+                <div class="options">
+                    <div class="btn jump-today"><i class="far fa-dot-circle fa-sm"></i></div>
+                    <div class="btn cancel-btn">Cancel</div>
+                    <div class="btn ok-btn">Ok</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let c = $('.calendar');
+        let calendar = new Calendar(c);
+        // console.log(calendar.getSelectedDate().day);
+        // console.log(c.find(0));
+        c.find('.ok-btn').on('click', function () { console.log(calendar.getSelectedDate().fullDate) });
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Basic</title>
+    <script>
+        window.onload = function() {
+            var output = '';
+
+            for(var i = 1; i <= 6; i++) {
+                output += '<h' + i + '>Header - ' + i + '<h' + i + '>'; 
+            }
+
+            document.body.innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

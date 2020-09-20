@@ -1,0 +1,33 @@
+body {
+    background: rgb(68, 148, 223);
+    text-align: center;
+    padding: 150px;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+form {
+    float: none; width: 434px; margin: 0 auto;
+}
+
+input[type=text] {
+    border-top: 0;
+    background: none;
+    width: 400px;
+    text-align: center;
+    margin-top: 16px;
+    padding: 5px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+button {
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: rgb(136, 132, 132);
+}

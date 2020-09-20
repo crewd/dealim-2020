@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://newspaper321.dothome.co.kr/main.html -->
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./main_files/bootstrap.min.css">
+  <link rel="stylesheet" href="php.css">
+  <script src="./main_files/jquery.min.js"></script>
+  <script src="./main_files/popper.min.js"></script>
+  <script src="./main_files/bootstrap.min.js"></script>
+
+
+  <title>회원 관리 시스템</title>
+</head>
+
+<body>
+  <div class="form-structor">
+    <FORM METHOD="post" ACTION="insert_result.php">
+
+      <div class="signup">
+        <h2 class="form-title" id="signup"><span>or</span>신규 회원 가입</h2>
+        <div class="form-holder">
+          <input type="text" class="input" placeholder="아이디" name="userID" />
+          <input type="text" class="input" placeholder="이름" NAME="userName" />
+          <input type="text" class="input" placeholder="출생연도" NAME="birthYear" />
+          <input type="text" class="input" placeholder="지역" NAME="addr" />
+          <input type="text" class="input" placeholder="휴대폰 국번" NAME="mobile1" />
+          <input type="text" class="input" placeholder="휴대폰 전화번호" NAME="mobile2" />
+          <input type="text" class="input" placeholder="신장" NAME="height" />
+
+        </div>
+        <button type="submit" class="submit-btn">회원 등록</button>
+      </div>
+    </FORM>
+
+    <div class="login slide-up">
+      <div class="center">
+        <h2 class="form-title" id="login"><span>or</span>회원 정보</h2>
+        <form method="get" action="update.php">
+          <div class="form-holder">
+            <input type="text" class="input" placeholder="아이디" />
+          </div>
+          <button type="submit" class="submit-btn">수정</button>
+        </form>
+        <form method="get" action="delete.php">
+          <div class="form-holder">
+            <input type="text" class="input" placeholder="아이디" />
+          </div>
+          <button class="submit-btn">삭제</button>
+        </form>
+        <a href="select.php" style="text-decoration: none;"><button class="submit-btn">회원검색</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="php.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery basic</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .box.hover {
+            background: blue;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // $(document).ready(function() {
+        //     $('.box').hover(function() {
+        //         $('.box').addClass('hover');
+        //     }, function() {
+        //         $('.box').removeClass('hover');
+        //     });
+        // });
+
+        $(document).ready(function() {
+            $('.box').css ({
+                width: 100,
+                height: 100,
+                background: 'orange'
+            }).on({
+                click: function() {
+                    $(this).css('background', 'red');
+                }, 
+                mouseenter: function() {
+                    $(this).css('background', 'blue');
+                }, 
+                mouseleave: function() {
+                    $(this).css('background', 'orange');
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

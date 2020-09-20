@@ -1,0 +1,173 @@
+<html>
+
+<head>
+  <title>반응형</title>
+  <style>
+    body {
+      margin: auto;
+      text-align: center;
+    }
+
+    div {
+      line-height: 300px;
+    }
+
+    .box {
+      width: calc(100% / 3);
+      float: left;
+      height: 300px;
+    }
+
+    .box2 {
+      float: left;
+      width: 100%;
+      height: 300px;
+    }
+
+    .box3 {
+      float: left;
+      width: 50%;
+      height: 300px;
+    }
+
+    @media(max-width: 760px) {
+      body {
+        margin: auto;
+        text-align: center;
+      }
+
+      .box {
+        width: 100%;
+        height: 300px;
+      }
+
+      .box2 {
+        float: left;
+        width: 100%;
+        height: 300px;
+      }
+
+      .box3 {
+        float: left;
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    @media(min-width: 761px) and (max-width: 950px) {
+      body {
+        margin: auto;
+        text-align: center;
+
+      }
+
+      .box {
+        width: 50%;
+        float: left;
+        height: 300px;
+      }
+
+      .box1-2 {
+        float: left;
+        width: 100%;
+        height: 300px;
+      }
+
+      .box2 {
+        float: left;
+        width: 100%;
+        height: 300px;
+      }
+
+      .box3 {
+        float: left;
+        width: 50%;
+        height: 300px;
+      }
+    }
+  </style>
+  <script>
+    var mediaQ1 = window.matchMedia("(min-width: 761px) and (max-width: 950px)");
+    var mediaQ2 = window.matchMedia("(max-width: 760px)");
+    var mediaQ3 = window.matchMedia("(min-width: 951px)");
+    var h_tag = document.getElementById('h-tag');
+    var text = document.createTextNode('반응형 웹(자바스크립트)');
+
+    function tablet(e) {
+      if (e.matches) {
+        var ele = document.createElement('h2');
+        ele.appendChild(text);
+        document.getElementById('h-tag').appendChild(ele);
+      } else {
+        h_tag.removeChild(h_tag.firstChild);
+      }
+    }
+
+    function moblie(e) {
+      if (e.matches) {
+        var ele = document.createElement('h3');
+        ele.appendChild(text);
+        document.getElementById('h-tag').appendChild(ele);
+      } else {
+        h_tag.removeChild(h_tag.firstChild);
+      }
+    }
+  
+
+    function descktop(e) {
+      if (e.matches) {
+        var ele = document.createElement('h1');
+        ele.appendChild(text);
+        document.getElementById('h-tag').appendChild(ele);
+      } else {
+        h_tag.removeChild(h_tag.firstChild);
+      }
+    }
+
+    window.onload = function () {
+      if(mediaQ3.matches) {
+        var ele = document.createElement('h1');
+        ele.appendChild(text);
+        document.getElementById('h-tag').appendChild(ele);
+      }
+
+      else if(mediaQ2.matches) {
+        var ele = document.createElement('h3');
+        ele.appendChild(text);
+        document.getElementById('h-tag').appendChild(ele);
+      } 
+
+      else if(mediaQ1.matches) {
+        var ele = document.createElement('h2');
+        ele.appendChild(text);
+        document.getElementById('h-tag').appendChild(ele);
+      }
+    }
+    mediaQ1.addListener(tablet);
+    mediaQ2.addListener(moblie);
+    mediaQ3.addListener(descktop);
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <span id="h-tag"></span>
+
+  <div class="box" style="background: red;">1</div>
+  <div class="box" style="background: green;">2</div>
+  <div class="box box1-2" style="background: blue;">3</div>
+
+  <div class="box2" style="background: darkcyan">4</div>
+
+  <div class="box3" style="background: chocolate">5</div>
+  <div class="box3" style="background: chartreuse">6</div>
+
+
+
+
+</body>
+
+</html>

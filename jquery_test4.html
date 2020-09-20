@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>event basic</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+       $(document).ready(function() {
+           $('button').click(function() {
+               $('.page').fadeToggle('slow');
+           })
+       });
+    </script>
+</head>
+<body>
+    <button>Toggle Show</button>
+    <div class="page">
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</3>
+        <h4>Header 3</h4>
+        <h5>Header 3</h5>
+        <h6>Header 3</h6>
+    </div>
+</body>
+</html>

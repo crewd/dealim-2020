@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Clock</title>
+    <script>
+        function getFormatDate(date) {
+            var year = date.getFullYear();
+
+            var month = (1 + date.getMonth());
+            month = month >= 10 ? month : '0' + month;
+
+            var day = date.getDate();
+            day = day >= 10 ? day : '0' + day;
+
+            var day = date.getDay();
+            var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+            var hour = date.getHours();
+            
+            var minute = date.getMinutes();
+            if(minute < 10) {
+                minute = '0' + minute;
+            }
+
+            var sec = date.getSeconds();
+            if(sec < 10) {
+                sec = '0' + sec;
+            }
+
+            return year + '년 ' + month + '월 ' + day + '일 ' + week[day] + '요일 ' + hour + '시  ' + minute + '분 '  + sec + '초 ';
+        }
+
+        window.onload = function() {
+            var clock = document.getElementById('clock');
+
+            setInterval(function () {
+                var now = new Date();
+
+                now = getFormatDate(now);
+
+                clock.innerHTML = now.toString();
+            }, 1000)
+        }
+    </script>
+</head>
+<body>
+    <h1 id = "clock"></h1>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>event basic</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+       $(document).ready(function() {
+           $('.box').css({
+               width: 100,
+               height: 100,
+               background: 'red'
+           }).animate({
+               width: 300,
+               opacity: 0.5,
+           }, 500)
+       });
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

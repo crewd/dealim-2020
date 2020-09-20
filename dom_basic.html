@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Basic</title>
+    <script>
+        window.onload = function() {
+            document.querySelector('h1').style.background="red";
+            document.querySelector('h2').style.color="red";
+
+            var header = document.getElementById('header');
+
+            header.style.color = 'orange';
+            header.style.background = 'red';
+            header.innerHTML = 'From JavaScript';
+        }
+    </script>
+</head>
+<body>
+    <h1>Process - 1</h1>
+    <h2>Process - 2</h2>
+
+    <h1 id="header">Header</h1>
+</body>
+</html>
